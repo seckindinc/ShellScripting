@@ -1,0 +1,2 @@
+dos2unix -ascii -437 $folder/FILE_NAME.txt $folder/FILE_NAME.d2u.txt
+iconv -f utf-8 -t cp1254 $folder/FILE_NAME.d2u.txt > $folder/FILE_NAME.cp1254.bcp

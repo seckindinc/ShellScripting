@@ -1,0 +1,18 @@
+#!/bin/bash
+
+echo 'Kontrol satirlari silinecek dosyayi belirtiniz:'
+read SEGMENTDIR
+
+echo 'Kontrol satirlari silinecek dosyayi belirtiniz:'
+read FILE
+
+TIME=`date +%b-%d-%y`
+SCRDIR=/home/seckindinc/Desktop/Projects/SARP/
+DESDIR=/home/seckindinc/temp
+
+cd $SCRDIR/$SEGMENTDIR
+
+mkdir $DESDIR/$TIME
+
+cat $FILE | grep -v "@SQL" | sed "s/return/GO/g"| grep -v "begin" | grep -v "end" > $DESDIR/$TIME/$FILE
+

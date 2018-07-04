@@ -1,0 +1,6 @@
+#!/bin/bash
+
+date |tee illegal_row
+cat FILE_NAME | tr -d -c '|\n' | gawk '{ i=i+1; print i":"length}' |grep -v ":DELIMITER_NUMBER" |tee -a illegal_row
+date |tee -a illegal_row
+

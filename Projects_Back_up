@@ -1,0 +1,7 @@
+#!/bin/bash
+
+TIME=`date +%b-%d-%y`
+FILENAME=backup-$TIME.tar.gz
+SRCDIR=/home/seckindinc/Desktop/Projects
+DESDIR=/home/seckindinc/Backup/Projects-Backup
+tar -cpzf $DESDIR/$FILENAME $SRCDIR
